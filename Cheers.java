@@ -14,13 +14,18 @@ public class Cheers {
            for(int i = 0; i < word.length(); i++){
                 char letter = word.charAt(i);
                 String prefix;
-                if(specialCase.charAt(letter) != -1){
-                        prefix = "an";
+                if(specialCase.indexOf(letter) != -1){
+                        prefix = "an ";
                 }else{
                         prefix = "a ";
                 }
-                System.out.println("Give me " + letter + ": " + letter + " ! ! !");
+                System.out.println("Give me " + prefix + letter + ": " + letter + "!");
            }
+           System.out.println("What does that spell?");
+           for(int i = 0; i < timesToRepeat; i++){
+                System.out.println(word + "!!!");
+           }
+
 
         }
 }
